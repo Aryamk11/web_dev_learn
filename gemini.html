@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Cheat Sheet Example Page">
+    <meta name="keywords" content="HTML, Cheat Sheet, Example">
+    <meta name="author" content="Arya">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheat Sheet Demo</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My HTML Cheat Sheet Page 📝</h1>
+        <p>This page demonstrates various HTML elements.</p>
+        <hr>
+    </header>
+
+    <main>
+        
+        <section>
+            <h2>Text and Content</h2>
+            <p>This is a standard paragraph. HTML is the foundation of the web.</p>
+            <h1>This is a Heading 1</h1>
+            <h2>This is a Heading 2</h2>
+            <h3>This is a Heading 3</h3>
+            <h4>This is a Heading 4</h4>
+            <h5>This is a Heading 5</h5>
+            <h6>This is a Heading 6</h6>
+            <p>This paragraph contains a line break.<br>As you can see, the text continues on the next line.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Text Formatting</h2>
+            <p>
+                This is <b>bold text</b>.
+                This is <i>italic text</i>.
+                This is <big>bigger text</big> and this is <small>smaller text</small>.
+                H<sub>2</sub>O is the formula for water, and E=mc<sup>2</sup> is a famous equation.
+                This text is <ins>underlined (inserted)</ins>, this is <del>struck through (deleted)</del>, and this is <mark>highlighted</mark>.
+            </p>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Hyperlinks</h2>
+            <p>
+                <a href="http://www.google.com" target="_blank" title="Go to Google">This is a link to Google</a> that opens in a new tab.
+            </p>
+            <p>
+                You can also create an email link: <a href="mailto:test@example.com">Contact Us</a>.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Images, Audio, and Video</h2>
+            <h3>Image Example</h3>
+            <a href="https://www.google.com">
+                <img src="https://via.placeholder.com/150" width="150" height="150" alt="A 150x150 placeholder image" title="This is a placeholder image">
+            </a>
+            
+            <h3>Audio Example 🎵</h3>
+            <audio controls muted>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video Example 🎬</h3>
+            <video width="320" height="240" controls loop muted>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Lists</h2>
+            <h3>Unordered List (Bullets)</h3>
+            <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+
+            <h3>Ordered List (Numbers)</h3>
+            <ol type="I">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ol>
+
+            <h3>Description List</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>- Hypertext Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>- Cascading Style Sheets</dd>
+            </dl>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Table</h2>
+            <table border="1" style="width:50%; text-align:center;">
+                <tr style="background-color:#f2f2f2;">
+                    <th>Firstname</th>
+                    <th>Lastname</th> 
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Div, Span, and Style</h2>
+            <div style="background-color:lightgrey; padding: 10px;">
+                <p>This is a div, often used as a container. It has a light grey background.</p>
+                <p>This paragraph contains a <span style="color:blue; font-weight:bold;">span element</span>, which is used to style a part of the text.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Iframe (Embedding Content)</h2>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=6.71,51.18,6.83,51.25" width="400" height="300" style="border:0;"></iframe>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Forms</h2>
+            <form action="/submit-form" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="John" required><br><br>
+                    
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" placeholder="Doe" required><br><br>
+                    
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" maxlength="12"><br><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <label for="birthday">Birthday:</label><br>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+
+                    <p>Please select your gender:</p>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+
+                    <label for="car">Choose a car:</label>
+                    <select id="car" name="car">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                    </select><br><br>
+
+                    <button type="button" onclick="alert('Hello World!')">Click Me for an Alert!</button>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset Form">
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p>Author: Arya<br>
+        <a href="mailto:fake@example.com">fake@example.com</a></p>
+    </footer>
+
+</body>
+</html>
