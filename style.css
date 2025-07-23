@@ -1,0 +1,63 @@
+/*styling the whole html files by using   *  */
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+/* selecting a specific element */
+body {
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+
+h1 {
+    color: darkgreen; 
+    text-align: center;
+}
+
+h2, h3 {
+    color:mediumseagreen;
+}
+
+/* ID!*/
+#main-title {
+    background-color: #123456;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Class! */
+.highlight {
+    background-color: yellow;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+/* all links and paragraphs */
+p a {
+    color: #d6336c; /* Pink color for links in paragraphs */
+    text-decoration: none;
+}
+
+/* div */
+div {
+    border: 2px solid #333;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
