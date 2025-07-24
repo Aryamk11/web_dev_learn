@@ -6,16 +6,16 @@
 
 /* selecting a specific element */
 body {
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #f4f4f4;
 }
 
 
-h1 {
+.main-page h1 {
     color: darkgreen; 
     text-align: center;
 }
 
-h2, h3 {
+.main-page h2, h3 {
     color:mediumseagreen;
 }
 
@@ -36,13 +36,13 @@ h2, h3 {
 }
 
 /* all links and paragraphs */
-p a {
+.main-page p a {
     color: #d6336c; /* Pink color for links in paragraphs */
     text-decoration: none;
 }
 
 /* div */
-div {
+.main-page {
     border: 2px solid #333;
     padding: 15px;
     margin-bottom: 20px;
@@ -60,4 +60,70 @@ button {
 
 button:hover {
     background-color: #45a049; /* Darker green on hover */
+}
+.page2body{
+    background-color: #121212;color: #ffffff;
+}
+.page2body h1{
+
+    text-align: center;
+}
+.main-nav{
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+}
+.main-nav a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color  0.3s ease;
+}
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.main-nav a:hover{
+    background-color: #333333;
+    border-radius: 5px;
+}
+.main-nav a.active{
+    background-color: #5e2a97;
+    border-radius: 5px;
+}
+.main-nav a i {
+    margin-right: 8px; /* Adds space between the icon and the text */
+}
+.primary-btn{
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #8a4baf;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration:none;
+    
+}
+.primary-btn:hover{
+    background-color: #9d58c9;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+.primary-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
