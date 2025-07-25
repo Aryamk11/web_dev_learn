@@ -4,45 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 2 - Dark Purple Theme</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="page2body">
     <header class="main-header">
         <nav class="main-nav">
             <ul>
-                <li><a href="#" class="nav-link active">Home</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Services</a></li>
-                <li><a href="#" class="nav-link"><i class="fa-solid fa-phone"></i>Contact</a></li>
+                <li><a href="#" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-phone"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="content-wrapper">
         <h1 class="primary-text">Hello, this is page 2</h1>
+        
         <section class="card-section">
             <article class="content-card">
+                <img src="https://via.placeholder.com/400x150?text=Embrace+The+Void" alt="Abstract void image" class="card-image">
                 <h2 class="secondary-text">How to be a NULL?</h2>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est sapiente at ea laudantium illo, eius qui accusamus maxime placeat ex eum assumenda amet eos quasi ducimus laborum ratione sit.</p>
-<button class="btn primary-btn">Learn More <i class="fa-solid fa-arrow-right"></i></button>            </article>
+                <button class="btn primary-btn">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+            </article>
 
             <article class="content-card">
                 <h2 class="secondary-text">The Void Approach</h2>
                 <p class="card-text">Discover the art of becoming nothingness. Embrace the emptiness within and without.</p>
                 <ul class="feature-list">
-                    <li>Step 1: Release all attachments</li>
-                    <li>Step 2: Empty your mind</li>
-                    <li>Step 3: Become one with the void</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Step 1: Release all attachments</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Step 2: Empty your mind</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Step 3: Become one with the void</li>
                 </ul>
                 <button class="btn secondary-btn">Start Journey</button>
             </article>
+        </section>
+
+        <section class="team-section">
+            <h2 class="section-title">Meet the Instructors</h2>
+            <div class="team-container">
+                <div class="team-member-card">
+                    <img src="https://via.placeholder.com/150" alt="Instructor 1" class="team-member-img">
+                    <h3 class="member-name">Nullus</h3>
+                    <p class="member-title">Chief Void Officer</p>
+                    <p class="member-bio">The original architect of the NULL philosophy, guiding souls into serene emptiness.</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="https://via.placeholder.com/150" alt="Instructor 2" class="team-member-img">
+                    <h3 class="member-name">Nada</h3>
+                    <p class="member-title">Master of Emptiness</p>
+                    <p class="member-bio">Teaches advanced techniques in mental clarity and the art of un-being.</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="https://via.placeholder.com/150" alt="Instructor 3" class="team-member-img">
+                    <h3 class="member-name">Zilch</h3>
+                    <p class="member-title">Beginner's Guide</p>
+                    <p class="member-bio">Helps newcomers take their first courageous step into the beauty of nothing.</p>
+                </div>
+            </div>
         </section>
 
         <section class="cta-section">
             <h2 class="cta-title">Ready to embrace nothingness?</h2>
             <p class="cta-text">Join our NULL community today and begin your transformation.</p>
             <form class="signup-form">
-                <input type="email" placeholder="Enter your email" class="form-input">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Enter your worldly name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label for="reason">Primary Motivation:</label>
+                    <select id="reason" name="reason" class="form-input">
+                        <option value="">--Please choose an option--</option>
+                        <option value="clarity">To find clarity</option>
+                        <option value="release">To release attachments</option>
+                        <option value="curiosity">Pure curiosity</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                     <input type="checkbox" id="terms" name="terms">
+                     <label for="terms">I agree to become one with the void.</label>
+                </div>
                 <button type="submit" class="btn accent-btn">Become NULL</button>
             </form>
         </section>
