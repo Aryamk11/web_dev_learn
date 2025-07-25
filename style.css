@@ -172,16 +172,42 @@ justify-content: center;
     z-index: 1000;
 }
 .team-member-card {
-    position: relative;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 15px; 
+    text-align: center;
 }
 
-.badge {
-    position: absolute; 
-    top: 10px;
-    left: 10px;
-    background-color: #8a4baf; 
+.team-member-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+@media (max-width: 768px){
+    .team-container{
+        grid-template-columns: 1fr;
+    }
+}
+.feature-list li::before{
+    content: '\f054';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+    color: #8a4baf;
+    margin-right: 12px;
+
+}
+p::first-letter{
+    font-size: 20px;
+    font-weight: bold;
+}
+::selection{
+    background-color: #8a4baf;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
 }
