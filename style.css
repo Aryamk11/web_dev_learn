@@ -1,11 +1,11 @@
 /*styling the whole html files by using   *  */
 * {
-    font-family: Arial, sans-serif;
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
 /* selecting a specific element */
 body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -126,4 +126,50 @@ justify-content: center;
 .primary-btn:active {
     transform: translateY(0);
     box-shadow: none;
+}
+/* Add this to your style.css */
+.content-card {
+    background-color: #1e1e1e; /* A slightly lighter dark gray */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px; /* Space between the cards */
+    text-align: left; /* Set text-align back to left for this card */
+}
+.main-footer{
+    padding: 30px 20px;
+    margin-top: 60px;
+    background-color: #1c1c1c;
+    border-top: 3px solid #5e2a97;
+    text-align: center;
+}
+.footer-text{
+    color: #aaa;
+    margin-bottom: 20px;
+}
+.social-links a{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3 ease;
+}
+
+.social-links a:hover{
+    color: #8a4baf;
+    transform: translateY(-3px);
+}
+/* --- Force Icon Font Fix --- */
+
+/* For 'solid' icons like the phone and arrow */
+.fa-solid {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* For 'brand' icons like Twitter and GitHub */
+.fa-brands {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
 }
