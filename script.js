@@ -42,6 +42,29 @@ async function initializeApp() {
                 }, 1000);
             });
         });
+        const signupForm = document.querySelector('.signup-form');
+
+        signupForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const nameInput = document.querySelector('#name');
+            const emailInput = document.querySelector('#email');
+            const reasonSelect = document.querySelector('#reason');
+            const termsCheckbox = document.querySelector('#terms');
+
+            const formData = {
+                name: nameInput.value,
+                email: emailInput.value,
+                reason: reasonSelect.value,
+                agreedToTerms: termsCheckbox.checked 
+    
+            };
+            console.log('Form data captured:', formData);
+            alert(`Thank you ${formData.name}! your journey begins now.`)
+            
+            signupForm.reset();
+        });
+
 
     } catch (error) {
         console.error('Could not initialize the application:', error);
