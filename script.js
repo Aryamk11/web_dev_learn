@@ -1,38 +1,51 @@
-const mainHeading = document.querySelector('.primary-text')
+async function initializeApp() {
+    try {
+        const mainHeading = document.querySelector('.primary-text');
+        mainHeading.textContent = 'Welcome! This page is now interactive.';
 
-console.log(mainHeading)
+        const learnMoreBtn = document.querySelector('.primary-btn');
+        const cardText = document.querySelector('.card-text');
+        const originalText = cardText.textContent;
+        let isTextModified = false;
 
-mainHeading.textContent = 'Welcome! This page is now interactive.'
+        learnMoreBtn.addEventListener('click', function() {
+            if (isTextModified === false) {
+                cardText.textContent = 'Really? Wanna learn more?';
+                cardText.style.color = '#8a4baf';
+                isTextModified = true;
+            } else {
+                cardText.textContent = originalText;
+                cardText.style.color = '';
+                isTextModified = false;
+            }
+        });
 
-const learnMoreBtn = document.querySelector('.primary-btn')
-const cardText = document.querySelector('.card-text')
+        const response = await fetch('instructors.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const instructors = await response.json();
 
-const originalText = cardText.textContent;
+        const teamCards = document.querySelectorAll('.team-member-card');
+        teamCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const instructorKey = card.dataset.instructor;
+                const instructorInfo = instructors[instructorKey];
 
-let isTextModified = false;
+                const memberBio = card.querySelector('.member-bio');
+                memberBio.textContent = `Fact: ${instructorInfo.fact}`;
 
-learnMoreBtn.addEventListener('click', function(){
-    if (isTextModified === false){
-    cardText.textContent = 'Really? Wanna learn more?';
-    cardText.style.color = '#8a4baf'
-    isTextModified = true;
+                card.style.backgroundColor = '#333';
+                card.style.border = '1px solid #8a4baf';
+                setTimeout(() => {
+                    card.style.border = '';
+                }, 1000);
+            });
+        });
+
+    } catch (error) {
+        console.error('Could not initialize the application:', error);
     }
-    else{
-        cardText.textContent = originalText;
-        cardText.style.color = '';
-        isTextModified = false; 
-    }
-});
+}
 
-const teamCards = document.querySelectorAll('.team-member-card')
-
-teamCards.forEach(card =>{
-    card.addEventListener('click', () => {
-        console.log('A card was clicked!');
-        card.style.backgroundColor = '#333';
-        card.style.border = '1px solid #8a4baf';
-        setTimeout(() =>{
-            card.style.border = '';
-        }, 1000);
-    });
-});
+initializeApp();
