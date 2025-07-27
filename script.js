@@ -42,32 +42,42 @@ async function initializeApp() {
                 }, 1000);
             });
         });
-        const signupForm = document.querySelector('.signup-form');
 
-        signupForm.addEventListener('submit', (event) => {
+        const signupForm = document.querySelector('.signup-form');
+        signupForm.addEventListener('submit', async (event) => {
             event.preventDefault();
             
-            const nameInput = document.querySelector('#name');
-            const emailInput = document.querySelector('#email');
-            const reasonSelect = document.querySelector('#reason');
-            const termsCheckbox = document.querySelector('#terms');
-
             const formData = {
-                name: nameInput.value,
-                email: emailInput.value,
-                reason: reasonSelect.value,
-                agreedToTerms: termsCheckbox.checked 
-    
+                name: document.querySelector('#name').value,
+                email: document.querySelector('#email').value,
+                reason: document.querySelector('#reason').value,
+                agreedToTerms: document.querySelector('#terms').checked
             };
-            console.log('Form data captured:', formData);
-            alert(`Thank you ${formData.name}! your journey begins now.`)
             
-            signupForm.reset();
+            try {
+                const response = await fetch('http://localhost:3000/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                console.log('Server response:', result);
+                
+                alert(result.message);
+                
+                signupForm.reset();
+
+            } catch (error) {
+                console.error('Failed to send form data:', error);
+                alert('There was an error submitting the form.');
+            }
         });
 
-
-    } catch (error) {
-        console.error('Could not initialize the application:', error);
+    } catch (error) { 
+        console.error('Failed to initialize the application:', error);
     }
 }
 
