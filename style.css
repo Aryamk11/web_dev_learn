@@ -318,3 +318,11 @@ p::first-letter{
     background: #8a4baf;
     transform: scale(1.05);
 }
+
+#clock {
+    color: #aaa;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1e1e1e;
+}
