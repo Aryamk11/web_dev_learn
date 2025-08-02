@@ -3,114 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2 - Dark Purple Theme</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>NULL Institute</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="page2body">
+
     <header class="main-header">
         <div id="clock"></div>
         <nav class="main-nav">
             <ul>
-                <li><a href="#" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="#" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
-                <li><a href="#" class="nav-link"><i class="fa-solid fa-briefcase"></i> Services</a></li>
-                <li><a href="#" class="nav-link"><i class="fa-solid fa-phone"></i> Contact</a></li>
-                
+                <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="content-wrapper">
-        <h1 class="primary-text">Hello, this is page 2</h1>
-        
-        <section class="card-section">
-            <article class="content-card">
-                <img src="/Untitled.jpg" alt="Abstract void image" class="card-image">
-                <h2 class="secondary-text">How to be a NULL?</h2>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est sapiente at ea laudantium illo, eius qui accusamus maxime placeat ex eum assumenda amet eos quasi ducimus laborum ratione sit.</p>
-                <button class="btn primary-btn">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-            </article>
-
-            <article class="content-card">
-                <h2 class="secondary-text">The Void Approach</h2>
-                <p class="card-text">Discover the art of becoming nothingness. Embrace the emptiness within and without.</p>
-                    <ul class="feature-list">
-                        <li>Step 1: Release all attachments</li>
-                        <li>Step 2: Empty your mind</li>
-                        <li>Step 3: Become one with the void</li>
-                    </ul>
-                <button class="btn secondary-btn">Start Journey</button>
-            </article>
+    <main>
+        <section class="hero-section">
+            <h1 class="primary-text">Welcome to the NULL Institute</h1>
+            <p class="secondary-text">Embrace the elegant simplicity of the void.</p>
+            <a href="#" class="secondary-btn">Start Journey</a>
         </section>
+
+        <article class="content-card fade-in-element">
+            <img src="9cec0657-1446-410f-acef-5dfb2ba23b2e_large.webp" alt="Abstract swirling void" class="card-image" width="150">
+            <h2>Our Philosophy</h2>
+            <p class="card-text">We believe that in the world of code and data, true mastery is not about adding more, but about understanding what can be removed. Our curriculum is designed to strip away the unnecessary, leaving you with the pure, powerful fundamentals of logic and structure.</p>
+            <a href="#" class="primary-btn">Learn More</a>
+        </article>
+        
+        <article class="content-card fade-in-element">
+            <h2>What We Teach</h2>
+            <ul class="feature-list">
+                <li>The elegance of minimal code.</li>
+                <li>The power of empty data structures.</li>
+                <li>The art of silent, efficient algorithms.</li>
+                <li>The discipline of intentional logical pathways.</li>
+            </ul>
+        </article>
 
         <section class="team-section">
             <h2 class="section-title">Meet the Instructors</h2>
             <div class="team-container">
-
-                <div class="team-member-card" data-instructor="nullus">
-                    <img src="/images.steamusercontent.jpg" alt="Instructor Nullus" class="member-photo">
+                <div class="team-member-card fade-in-element" data-instructor="nullus">
+                    <img src="images.steamusercontent.jpg" alt="Instructor Nullus" class="member-photo">
                     <h3 class="member-name">Nullus</h3>
                     <p class="member-bio">Click this card to learn a fact about me!</p>
                 </div>
-
-                <div class="team-member-card" data-instructor="nada">
-                    <img src="/vibrant-purple-nebula-forming-a-circular-shape-in-deep-space-photo.jpg" alt="Instructor Nada" class="member-photo">
+                <div class="team-member-card fade-in-element" data-instructor="nada">
+                    <img src="vibrant-purple-nebula-forming-a-circular-shape-in-deep-space-photo.jpg" alt="Instructor Nada" class="member-photo">
                     <h3 class="member-name">Nada</h3>
                     <p class="member-bio">Click this card to learn a fact about me!</p>
                 </div>
-
-                <div class="team-member-card" data-instructor="zilch">
-                    <img src="/9cec0657-1446-410f-acef-5dfb2ba23b2e_large.webp" alt="Instructor Zilch" class="member-photo">
+                <div class="team-member-card fade-in-element" data-instructor="zilch">
+                    <img src="9cec0657-1446-410f-acef-5dfb2ba23b2e_large.webp" alt="Instructor Zilch" class="member-photo">
                     <h3 class="member-name">Zilch</h3>
                     <p class="member-bio">Click this card to learn a fact about me!</p>
                 </div>
-                
             </div>
         </section>
 
-        <section class="cta-section">
-            <h2 class="cta-title">Ready to embrace nothingness?</h2>
-            <p class="cta-text">Join our NULL community today and begin your transformation.</p>
-            <form class="signup-form">
+        <section class="cta-section fade-in-element">
+            <form action="#" class="signup-form">
+                <h2>Become NULL</h2>
                 <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="Enter your worldly name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="reason">Primary Motivation:</label>
+                    <label for="reason">Reason for Joining</label>
                     <select id="reason" name="reason" class="form-input">
-                        <option value="">--Please choose an option--</option>
-                        <option value="clarity">To find clarity</option>
-                        <option value="release">To release attachments</option>
-                        <option value="curiosity">Pure curiosity</option>
+                        <option value="curiosity">Curiosity</option>
+                        <option value="mastery">Mastery</option>
+                        <option value="release">Release from complexity</option>
                     </select>
                 </div>
                 <div class="form-group checkbox-group">
-                     <input type="checkbox" id="terms" name="terms">
-                     <label for="terms">I agree to become one with the void.</label>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to embrace the void.</label>
                 </div>
-                <button type="submit" class="btn accent-btn">Become NULL</button>
+                <button type="submit" class="accent-btn">Submit</button>
             </form>
         </section>
+
     </main>
 
     <footer class="main-footer">
-        <div class="footer-content">
-            <p class="footer-text">&copy; 2023 NULL Institute. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-link" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="social-link" title="Discord"><i class="fa-brands fa-discord"></i></a>
-                <a href="#" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
+        <p class="footer-text">&copy; 2025 NULL Institute. All rights reserved and unreserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-link" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-link" title="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="#" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
     </footer>
-    <a href="#" id="back-to-top-btn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></a>
-        <script src="script.js"></script> </body>
 
+    <div id="modal-overlay"></div>
+    <div id="modal">
+        <button id="modal-close-btn">&times;</button>
+        <h2>Your Journey Begins</h2>
+        <p>This is a modal window. By clicking "Start Journey," you've taken the first step. The path to NULL is a path of discipline and release. Are you prepared?</p>
+    </div>
+
+    <a href="#" id="back-to-top-btn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
 </body>
 </html>
