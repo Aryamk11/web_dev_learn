@@ -1,23 +1,11 @@
+import { initializeClock } from './clock.js';
+import { initializeModal } from './modal.js';
+import { initializeBackToTopButton } from './backToTop.js';
 async function initializeApp() {
     try {
-        // --- Live Clock Start ---
-        const clockElement = document.querySelector('#clock');
-        function updateClock() {
-            const now = new Date();
-            const options = {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
-            };
-            clockElement.textContent = now.toLocaleString('en-GB', options);
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-        // --- Live Clock End ---
+        initializeClock();
+        initializeBackToTopButton();
+        initializeModal();
 
         // --- Main Heading Change Start ---
         const mainHeading = document.querySelector('.primary-text');
@@ -43,53 +31,7 @@ async function initializeApp() {
         });
         // --- "Learn More" Button Toggle End ---
 
-        // --- Back to Top Button Start ---
-        const backToTopBtn = document.querySelector('#back-to-top-btn');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        // --- Back to Top Button End ---
         
-        // --- Modal Window Logic Start ---
-        const openModalBtn = document.querySelector('.secondary-btn');
-        const closeModalBtn = document.querySelector('#modal-close-btn');
-        const modal = document.querySelector('#modal');
-        const overlay = document.querySelector('#modal-overlay');
-
-        function openModal() {
-            modal.classList.add('open');
-            overlay.classList.add('open');
-        }
-
-        function closeModal() {
-            modal.classList.remove('open');
-            overlay.classList.remove('open');
-        }
-
-        openModalBtn.addEventListener('click', openModal);
-        closeModalBtn.addEventListener('click', closeModal);
-        overlay.addEventListener('click', closeModal);
-
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && modal.classList.contains('open')) {
-                closeModal();
-            }
-        });
-        // --- Modal Window Logic End ---
-
         // --- Scroll-Triggered Fade-In Animations Start ---
         const elementsToFadeIn = document.querySelectorAll('.fade-in-element');
 
