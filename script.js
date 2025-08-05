@@ -1,6 +1,7 @@
 import { initializeClock } from './clock.js';
 import { initializeModal } from './modal.js';
 import { initializeBackToTopButton } from './backToTop.js';
+import { initializeScrollAnimations } from './animations.js';
 async function initializeApp() {
     try {
         initializeClock();
