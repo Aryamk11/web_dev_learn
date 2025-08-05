@@ -1,6 +1,8 @@
+// In js/teamCards.js
+
 export async function initializeTeamCards() {
-    // --- Team Cards Interaction Start ---
-    const response = await fetch('instructors.json');
+    // FIX: The path must go up one directory to find the JSON file
+    const response = await fetch('../instructors.json');
     if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -15,6 +17,7 @@ export async function initializeTeamCards() {
             const memberBio = card.querySelector('.member-bio');
             memberBio.textContent = `Fact: ${instructorInfo.fact}`;
 
+            // (The rest of the styling logic remains the same)
             card.style.backgroundColor = '#333';
             card.style.border = '1px solid #8a4baf';
             setTimeout(() => {
@@ -22,5 +25,4 @@ export async function initializeTeamCards() {
             }, 1000);
         });
     });
-    // --- Team Cards Interaction End ---
 }
